@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --grey: #f2f2f2;
+    --dark-pink: #d9a3a3;
+    --light-pink: #f2d1ce;
+    --dark-brown: #bf6545;
+    --light-brown: #bf9d73;
+    --yellow: #f2ca52;
+    --purple: #593c3e;
+}
+
+.navbar-brand img{
+    border-radius: 50%;
+}
+
+.nav-link:hover{
+    background-color: var(--light-pink);
+    border-radius: 20%;
+}
+
+.logo h3{
+   color: var(--light-brown)
+}
