@@ -26,3 +26,15 @@
 .logo h3{
    color: var(--light-brown)
 }
+
+.btn{
+    background-color: var(--purple);
+    border: 2px solid var(--purple);
+    color:var(--light-pink);
+}
+
+.btn:hover{
+    background-color: var(--light-pink);
+    border: 2px solid var(--light-pink);
+    color:var(--purple);
+}
