@@ -38,3 +38,9 @@
     border: 2px solid var(--light-pink);
     color:var(--purple);
 }
+
+.color-form{
+    background-color: var(--light-pink);
+    border-color: var(--purple);
+}
+
