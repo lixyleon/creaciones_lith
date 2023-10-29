@@ -4,14 +4,18 @@
     box-sizing: border-box;
 }
 
+
 :root{
     --grey: #778686;
-    --dark-pink: #d9a3a3;
-    --light-pink: #ecddda;
+    --dark-pink: #aa5377;
+    --light-pink: #cf8da7;
     --dark-brown: #5e6355;
     --light-brown: #bf9d73;
     --yellow: #f29727;
-    --purple: #b38594;
+    --purple: #3b3759;
+    --green-light: #7aacb3;
+    --green-dark: #4c6e81;
+
 }
 
 .navbar-brand img{
@@ -28,20 +32,18 @@
 }
 
 .btn{
-    background-color: var(--purple);
-    border: 2px solid var(--purple);
-    color:var(--light-pink);
+    background-color: blueviolet;
+    border: 2px solid blueviolet;
+    color:white;
 }
 
 .btn:hover{
     background-color: var(--light-pink);
     border: 2px solid var(--light-pink);
-    color:var(--purple);
+    color:blueviolet;
 }
 
 .color-form{
     background-color: var(--light-pink);
     border-color: var(--purple);
 }
-
-

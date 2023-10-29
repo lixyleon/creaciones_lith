@@ -67,7 +67,7 @@ include("template/navbar.php");
   </div>
   <div class="container my-4">
     <div class="container text-center mb-3">
-      <h2 class="fw-bolder"><i>Catálogo de Diseños </i></h2>
+      <h2 class="fw-bolder"><i>Diseños más elegidos</i></h2>
       </div>
     <div class="row my-4">
       <div class="col-md-3">
@@ -76,7 +76,7 @@ include("template/navbar.php");
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="form.html" class="btn">Realizar pedido</a>
+            <a href="form.php" class="btn">Realizar pedido</a>
           </div>
         </div>
       </div>
@@ -134,7 +134,7 @@ include("template/navbar.php");
       </div>
       <div class="col-md-3">
         <div class="card" style="width: 18rem;">
-          <img src="images/Img8_2.png" class="card-img-top" alt="...">
+          <img src="images/img9_2.png" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -238,7 +238,9 @@ include("template/navbar.php");
       </div>
     </div>
   </div>
-
+<div class="container text-end">
+<a href="catalogo.php" class="btn" style="background-color: #3b3759;" >Más diseños</a>
+</div>
   <?php 
 include("template/footer.php");
 ?>
