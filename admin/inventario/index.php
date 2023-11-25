@@ -1,9 +1,10 @@
 <?php
 include('../bd.php');
+include('paginador.php');
 include('../template/navbar.php');
 
-$sentencia = $conexion->query("SELECT * FROM diseno");
-$listadiseno = $sentencia->fetchAll(PDO::FETCH_OBJ);
+/*$sentencia = $conexion->query("SELECT * FROM diseno");
+$listadiseno = $sentencia->fetchAll(PDO::FETCH_OBJ);*/
 
 ?>
 
@@ -29,7 +30,8 @@ $listadiseno = $sentencia->fetchAll(PDO::FETCH_OBJ);
             </thead>
             <tbody>
               <?php
-              foreach ($listadiseno as $diseno) {
+
+              foreach ($listaRegistros as $diseno) {
               ?>
                 <tr class="">
                   <td scope="row"><?php echo $diseno->id; ?></td>
@@ -43,8 +45,34 @@ $listadiseno = $sentencia->fetchAll(PDO::FETCH_OBJ);
               <?php
               }
               ?>
+
             </tbody>
           </table>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <?php if($pagina == 1): ?>
+              <li class="page-item disabled"><a class="page-link" href="#">Previo</a></li>
+              <?php else: ?> 
+              <li class="page-item"><a class="page-link" href="index.php?pagina=<?php echo $pagina-1; ?>">Previo</a></li>
+              <?php 
+                endif; 
+                for($i=1;$i<=$numeroPaginas;$i++){
+                  if($pagina==$i){
+                    echo '<li class="page-item active"><a class="page-link" href="index.php?pagina='.$i.'">'.$i.'</a></li>';
+                  }else{
+                    echo '<li class="page-item"><a class="page-link" href="index.php?pagina='.$i.'">'.$i.'</a></li>';
+                  }
+                }
+                if($pagina==$numeroPaginas):
+              ?>
+               <li class="page-item disabled"><a class="page-link" href="#">Siguiente</a></li>
+              <?php  else: ?>
+                <li class="page-item"><a class="page-link" href="index.php?pagina=<?php echo $pagina+1  ?>">Siguiente</a></li>
+              <?php endif; ?>
+
+            </ul>
+          </nav>
+
         </div>
       </div>
     </div>
@@ -54,17 +82,17 @@ $listadiseno = $sentencia->fetchAll(PDO::FETCH_OBJ);
           <h2 class="text-center"> Ingresar nuevo diseño: </h2>
         </div>
         <form action="save_image.php" name="subida-imagenes" method="POST" enctype="multipart/form-data">
-                    <div class="form-group mb-3">
-                        <input type="text" name="title" class="form-control" placeholder="Title" autofocus>
-                    </div>
-                    <div class="form-group mb-3">
-                        <textarea name="description" row="2" class="form-control"></textarea>
-                    </div>
-                    <div class="form-group mb-1">
-                        <input type="file" name="image" class="form-control">
-                    </div>
-                    <input type="submit" name="subir-imagen" value="Enviar imagen" class="btn btn-dark w-100 btn-block">
-                </form>
+          <div class="form-group mb-3">
+            <input type="text" name="title" class="form-control" placeholder="Title" autofocus>
+          </div>
+          <div class="form-group mb-3">
+            <textarea name="description" row="2" class="form-control"></textarea>
+          </div>
+          <div class="form-group mb-1">
+            <input type="file" name="image" class="form-control">
+          </div>
+          <input type="submit" name="subir-imagen" value="Enviar imagen" class="btn btn-dark w-100 btn-block">
+        </form>
       </div>
     </div>
 
