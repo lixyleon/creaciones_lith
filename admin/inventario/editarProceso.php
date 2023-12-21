@@ -8,6 +8,7 @@ include('../bd.php');
 $id = $_POST['id'];
 $title = $_POST['title'];
 $description = $_POST['description'];
+$categoria = $_POST['categoria'];
 //guarda nombre de la imagem 
 $img = $_FILES['image']['name'];
 //toma el archivo
@@ -24,8 +25,8 @@ if (in_array($_FILES['image']['type'], $extensiones)) {
   if ($_FILES['image']['size'] < $max_tamanyo) {
     //   echo 'Pesa menos de 1 MB';
     if (move_uploaded_file($archivo, $rut)) {
-      $query = $conexion->prepare("UPDATE diseno SET titulo=?, descripcion=?, ruta=? WHERE id=?");
-      $resultado = $query->execute([$title,$description,$rut,$id]);
+      $query = $conexion->prepare("UPDATE diseno SET titulo=?, descripcion=?, ruta=?, categoria =? WHERE id=?");
+      $resultado = $query->execute([$title,$description,$rut, $categoria, $id]);
      
       if ($resultado === TRUE) {
         header('location: index.php?mensaje=modificado');

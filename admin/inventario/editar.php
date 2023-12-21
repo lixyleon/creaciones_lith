@@ -35,10 +35,15 @@ $disenos = $sentencia->fetch(PDO::FETCH_OBJ);
                             <img src="<?php echo $disenos->ruta; ?>" class="card-img-top" alt="...">
                       
                 </div>
+                <div class="form-group mb-3">
+                    <input type="text" name="categoria" class="form-control" value="<?php echo $disenos->categoria; ?>" placeholder="Title" autofocus>
+                </div>
                 <input type="hidden" name="id" value="<?php echo $disenos->id;?>">
                 <input type="submit" name="editar-imagen" value="Editar imagen" class="btn btn-dark w-100 btn-block">
             </form>
+            
         </div>
+        <button type="button" class="btn btn-secondary mt-2"> <a class="text-white text-reset text-decoration-none" href="index.php"> Regresar</a> </button>
     </div>
     
 </div>

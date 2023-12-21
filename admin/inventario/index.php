@@ -25,6 +25,7 @@ $listadiseno = $sentencia->fetchAll(PDO::FETCH_OBJ);*/
                 <th scope="col">Titulo</th>
                 <th scope="col">Descripción</th>
                 <th scope="col">Ruta</th>
+                <th scope="col">Categoria</th>
                 <th scope="col" colspan="2">Opciones</th>
               </tr>
             </thead>
@@ -39,6 +40,7 @@ $listadiseno = $sentencia->fetchAll(PDO::FETCH_OBJ);*/
                   <td><?php echo $diseno->titulo; ?></td>
                   <td><?php echo $diseno->descripcion; ?></td>
                   <td><?php echo $diseno->ruta; ?></td>
+                  <td><?php echo $diseno->categoria; ?></td>
                   <td><a class="text-success" href="editar.php?id=<?php echo $diseno->id; ?>"><i class="bi bi-pencil-square"></i></a></td>
                   <td><a onclick="return confirm('Estás seguro de eliminar?')" class="text-danger" href="eliminar.php ?id=<?php echo $diseno->id; ?>"><i class=" bi bi-trash"></i></a></td>
                 </tr>
@@ -90,6 +92,9 @@ $listadiseno = $sentencia->fetchAll(PDO::FETCH_OBJ);*/
           </div>
           <div class="form-group mb-1">
             <input type="file" name="image" class="form-control">
+          </div>
+          <div class="form-group mb-3">
+            <input type="text" name="categoria" class="form-control" placeholder="Categoria" autofocus>
           </div>
           <input type="submit" name="subir-imagen" value="Enviar imagen" class="btn btn-dark w-100 btn-block">
         </form>
