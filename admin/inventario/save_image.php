@@ -3,6 +3,7 @@ include('../bd.php');
 if(isset($_POST['subir-imagen'])){
   $title = $_POST['title'];
   $description = $_POST['description'];
+  $categoria = $_POST['categoria'];
   //guarda nombre de la imagem 
   $img = $_FILES['image']['name'];
   //toma el archivo
@@ -22,7 +23,7 @@ if(isset($_POST['subir-imagen'])){
        if ( $_FILES['image']['size']< $max_tamanyo ) {
          //echo 'Pesa menos de 1 MB';
             if( move_uploaded_file ( $archivo, $rut) ) {
-             $sentencia = $conexion->query("INSERT INTO diseno (titulo, descripcion, ruta) VALUES ('$title','$description','$rut')");
+             $sentencia = $conexion->query("INSERT INTO diseno (titulo, descripcion, ruta, categoria) VALUES ('$title','$description','$rut','$categoria')");
            header("Location:index.php");
           }
        }

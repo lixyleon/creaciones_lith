@@ -15,7 +15,7 @@
     <div class="container-fluid">
       <div class="container d-flex align-items-center">
         <a class="navbar-brand logo" href="#">
-          <img src="images/logo_final-removebg-preview.png" alt="LiTh" width="90" height="84">
+          <img src="../admin/inventario/imagenes/Logotipo Logo Marca personal Pastel Amarillo.png" alt="LiTh" width="90" height="84">
         </a>
         <h3 class="fw-bold" style="color:#080100;"><i>Creaciones LiTh</i></h3>
       </div>

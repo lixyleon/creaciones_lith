@@ -8,7 +8,7 @@ include("admin/bd.php");
   <div class="card  border border-0 bg-transparen presentation">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="images/vista-frontal-muchos-corazones-rosados-que-salen-caja-actual.jpg" class="img-fluid rounded" alt="caja-regalo">
+        <img src="admin/inventario/imagenes/vista-frontal-muchos-corazones-rosados-que-salen-caja-actual.jpg" class="img-fluid rounded" alt="caja-regalo">
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -30,7 +30,7 @@ include("admin/bd.php");
   <div class="row">
     <div class="col-md-3">
       <div class="card" style="width: 18rem;">
-        <img src="images/taza-portada2.jpg" class="card-img-top" alt="...">
+        <img src="admin/inventario/imagenes/taza-portada2.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Tazas</h5>
 
@@ -39,7 +39,7 @@ include("admin/bd.php");
     </div>
     <div class="col-md-3">
       <div class="card" style="width: 18rem;">
-        <img src="images/bolso.jpg" card-img-top" alt="...">
+        <img src="admin/inventario/imagenes/bolso.jpg" card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Bolso</h5>
 
@@ -48,7 +48,7 @@ include("admin/bd.php");
     </div>
     <div class="col-md-3">
       <div class="card" style="width: 18rem;">
-        <img src="images/1697898707453.png" class="card-img-top" alt="...">
+        <img src="admin/inventario/imagenes/pop.png" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">PopSocket</h5>
 
@@ -57,7 +57,7 @@ include("admin/bd.php");
     </div>
     <div class="col-md-3">
       <div class="card" style="width: 18rem;">
-        <img src="images/vaso.jpg" class="card-img-top" alt="...">
+        <img src="admin/inventario/imagenes/vaso.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Vaso Térmico</h5>
 
@@ -71,7 +71,7 @@ include("admin/bd.php");
   <div class="row">
     <div class="col-md-3">
     <?php 
-    include('producto.php');
+    include('admin/inventario/producto.php');
     ?>
     </div>
   </div>
